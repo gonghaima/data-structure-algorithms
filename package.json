@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,32 @@
   "bugs": {
     "url": "https://github.com/gonghaima/data-structure-algorithms/issues"
   },
-  "homepage": "https://github.com/gonghaima/data-structure-algorithms#readme"
+  "homepage": "https://github.com/gonghaima/data-structure-algorithms#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
