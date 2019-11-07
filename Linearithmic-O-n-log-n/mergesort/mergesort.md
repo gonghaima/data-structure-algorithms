@@ -41,3 +41,25 @@ function merge(a = [], b = []) {
 ```
 
 As you can see, it has two functions sort and merge. Merge is an auxiliary function that runs once through the collection a and b, so it’s running time is O(n). Let’s apply the Master Method to find the running time.
+
+## Master Method for Mergesort
+
+We are going to apply the Master Method that we explained above to find the runtime:
+
+1. Let’s find the values of: T(n) = a T(n/b) + f(n)
+   a: The number of sub-problems is 2 (line 12). So, a = 2.
+   b: Each of the sub-problems divides n in half. So, b = 2
+   f(n): The work done outside the recursion is the function merge, which has a runtime of O(n) since it visits all the elements on the given arrays.
+
+   Substituting the values:
+   >>T(n) = 2 T(n/2) + O(n)
+2. Let’s find the work done in the recursion: nlogba.
+   nlog22
+   n1 = n
+3. Finally, we can see that recursion runtime from step 2) is O(n) and also the non-recursion runtime is O(n). So, we have the case 2 : O(nlogba log(n))
+
+O(nlog22 log(n))
+
+O(n1 log(n))
+
+O(n log(n)) 👈 this is running time of the merge sort
