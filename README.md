@@ -50,3 +50,5 @@ Trees Data Structures for Beginners
 Self-balanced Binary Search Trees
 
 Appendix I: Analysis of Recursive Algorithms
+
+![alt big-o](all-running-complexities-graphs/big-o-running-time-complexity.png)
